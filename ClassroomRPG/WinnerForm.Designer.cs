@@ -36,22 +36,25 @@
             // WinnerLabel
             // 
             WinnerLabel.AutoSize = true;
+            WinnerLabel.BackColor = Color.White;
             WinnerLabel.FlatStyle = FlatStyle.System;
             WinnerLabel.Font = new Font("Century Gothic", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            WinnerLabel.Location = new Point(121, 79);
+            WinnerLabel.Location = new Point(99, 33);
             WinnerLabel.Name = "WinnerLabel";
             WinnerLabel.Size = new Size(601, 74);
             WinnerLabel.TabIndex = 0;
             WinnerLabel.Text = "!!!Congratulations!!!";
+            WinnerLabel.TextAlign = ContentAlignment.TopCenter;
+            WinnerLabel.Click += WinnerLabel_Click;
             // 
             // LabelWinnerMessage
             // 
             LabelWinnerMessage.AccessibleRole = AccessibleRole.None;
             LabelWinnerMessage.AutoSize = true;
             LabelWinnerMessage.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelWinnerMessage.Location = new Point(0, 0);
+            LabelWinnerMessage.Location = new Point(126, 141);
             LabelWinnerMessage.Name = "LabelWinnerMessage";
-            LabelWinnerMessage.Size = new Size(511, 81);
+            LabelWinnerMessage.Size = new Size(504, 70);
             LabelWinnerMessage.TabIndex = 1;
             LabelWinnerMessage.Text = "You win {winner}";
             LabelWinnerMessage.TextAlign = ContentAlignment.MiddleCenter;
@@ -59,10 +62,10 @@
             // btnResetGame
             // 
             btnResetGame.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnResetGame.Location = new Point(339, 309);
+            btnResetGame.Location = new Point(296, 295);
             btnResetGame.Name = "btnResetGame";
             btnResetGame.Padding = new Padding(5);
-            btnResetGame.Size = new Size(122, 37);
+            btnResetGame.Size = new Size(170, 56);
             btnResetGame.TabIndex = 2;
             btnResetGame.Text = "PLAY AGAIN";
             btnResetGame.UseVisualStyleBackColor = true;
@@ -72,7 +75,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Aquamarine;
+            BackgroundImage = Properties.Resources.bg;
+            ClientSize = new Size(800, 370);
             Controls.Add(btnResetGame);
             Controls.Add(LabelWinnerMessage);
             Controls.Add(WinnerLabel);

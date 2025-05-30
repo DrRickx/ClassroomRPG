@@ -43,5 +43,10 @@ namespace ClassroomRPG
                 Application.Exit(); // Exit app if closed with X
             }
         }
+
+        private void WinnerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

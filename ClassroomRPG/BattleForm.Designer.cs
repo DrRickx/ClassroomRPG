@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BattleForm));
             StartButton = new Button();
             BattleLogScreen = new ListBox();
             btnAttack = new Button();
@@ -36,13 +37,13 @@
             attackerName = new Label();
             flowLayoutPanel5 = new FlowLayoutPanel();
             flowLayoutPanel3 = new FlowLayoutPanel();
+            Player2Avatar = new PictureBox();
             Player2InformationPanel = new FlowLayoutPanel();
             Player2Label = new Label();
             Player2NameInput = new TextBox();
             Player2ClassLabel = new Label();
             Player2ClassList = new ComboBox();
             Player2HealthLabel = new Label();
-            Player2Avatar = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             Player1InformationPanel = new FlowLayoutPanel();
             player1Label = new Label();
@@ -55,8 +56,8 @@
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
-            Player2InformationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Player2Avatar).BeginInit();
+            Player2InformationPanel.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             Player1InformationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Player1Avatar).BeginInit();
@@ -100,10 +101,10 @@
             flowLayoutPanel1.Controls.Add(BattleLogScreen);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 462);
+            flowLayoutPanel1.Location = new Point(0, 471);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(5);
-            flowLayoutPanel1.Size = new Size(800, 119);
+            flowLayoutPanel1.Size = new Size(881, 119);
             flowLayoutPanel1.TabIndex = 21;
             // 
             // flowLayoutPanel4
@@ -115,7 +116,7 @@
             flowLayoutPanel4.Location = new Point(521, 8);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Padding = new Padding(10);
-            flowLayoutPanel4.Size = new Size(263, 101);
+            flowLayoutPanel4.Size = new Size(333, 101);
             flowLayoutPanel4.TabIndex = 15;
             // 
             // attackerName
@@ -136,7 +137,7 @@
             flowLayoutPanel5.Location = new Point(13, 31);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Padding = new Padding(5);
-            flowLayoutPanel5.Size = new Size(211, 41);
+            flowLayoutPanel5.Size = new Size(224, 50);
             flowLayoutPanel5.TabIndex = 1;
             // 
             // flowLayoutPanel3
@@ -144,13 +145,22 @@
             flowLayoutPanel3.AutoSize = true;
             flowLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel3.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanel3.Controls.Add(Player2InformationPanel);
             flowLayoutPanel3.Controls.Add(Player2Avatar);
-            flowLayoutPanel3.Location = new Point(157, 12);
+            flowLayoutPanel3.Controls.Add(Player2InformationPanel);
+            flowLayoutPanel3.Location = new Point(242, 246);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Padding = new Padding(10);
             flowLayoutPanel3.Size = new Size(613, 208);
             flowLayoutPanel3.TabIndex = 22;
+            // 
+            // Player2Avatar
+            // 
+            Player2Avatar.BorderStyle = BorderStyle.FixedSingle;
+            Player2Avatar.Location = new Point(13, 13);
+            Player2Avatar.Name = "Player2Avatar";
+            Player2Avatar.Size = new Size(366, 180);
+            Player2Avatar.TabIndex = 20;
+            Player2Avatar.TabStop = false;
             // 
             // Player2InformationPanel
             // 
@@ -163,7 +173,7 @@
             Player2InformationPanel.Controls.Add(Player2ClassList);
             Player2InformationPanel.Controls.Add(Player2HealthLabel);
             Player2InformationPanel.FlowDirection = FlowDirection.TopDown;
-            Player2InformationPanel.Location = new Point(13, 13);
+            Player2InformationPanel.Location = new Point(385, 13);
             Player2InformationPanel.Name = "Player2InformationPanel";
             Player2InformationPanel.Padding = new Padding(10);
             Player2InformationPanel.Size = new Size(213, 143);
@@ -178,6 +188,7 @@
             Player2Label.Size = new Size(117, 18);
             Player2Label.TabIndex = 1;
             Player2Label.Text = "Player 2 name:";
+            Player2Label.Click += Player2Label_Click;
             // 
             // Player2NameInput
             // 
@@ -214,15 +225,6 @@
             Player2HealthLabel.TabIndex = 11;
             Player2HealthLabel.Text = "Health:";
             // 
-            // Player2Avatar
-            // 
-            Player2Avatar.BorderStyle = BorderStyle.FixedSingle;
-            Player2Avatar.Location = new Point(232, 13);
-            Player2Avatar.Name = "Player2Avatar";
-            Player2Avatar.Size = new Size(366, 180);
-            Player2Avatar.TabIndex = 20;
-            Player2Avatar.TabStop = false;
-            // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.AutoSize = true;
@@ -230,7 +232,7 @@
             flowLayoutPanel2.BorderStyle = BorderStyle.FixedSingle;
             flowLayoutPanel2.Controls.Add(Player1InformationPanel);
             flowLayoutPanel2.Controls.Add(Player1Avatar);
-            flowLayoutPanel2.Location = new Point(9, 240);
+            flowLayoutPanel2.Location = new Point(9, 12);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(10);
             flowLayoutPanel2.Size = new Size(615, 207);
@@ -311,21 +313,23 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 581);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(881, 590);
             Controls.Add(flowLayoutPanel3);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
             Name = "BattleForm";
             Text = "BattleForm";
+            Load += BattleForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel4.ResumeLayout(false);
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel5.ResumeLayout(false);
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Player2Avatar).EndInit();
             Player2InformationPanel.ResumeLayout(false);
             Player2InformationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Player2Avatar).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
             Player1InformationPanel.ResumeLayout(false);

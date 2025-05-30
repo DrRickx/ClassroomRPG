@@ -56,7 +56,7 @@ namespace ClassroomRPG
             {
                 Size = new Size(200, 25)
             };
-           
+
             Player2InformationPanel.Controls.Add(player2HealthBar);
 
             Player1ClassList.Items.AddRange(new string[] { "Fighter Nelson", "Paladin Alexander" });
@@ -182,5 +182,14 @@ namespace ClassroomRPG
             isPlayer1Turn = !isPlayer1Turn;
         }
 
+        private void Player2Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BattleForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
