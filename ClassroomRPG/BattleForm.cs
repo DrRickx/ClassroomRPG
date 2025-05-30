@@ -30,7 +30,7 @@ namespace ClassroomRPG
 
             BattleLogScreen.Items.Clear();
 
-            attackerName.Text = "";
+            attackerName.Text = "What will you do?";
 
             StartButton.Enabled = true;
             StartButton.BackColor = SystemColors.Control;
@@ -91,6 +91,9 @@ namespace ClassroomRPG
 
                 Player2Avatar.Image = Image.FromFile(player2.SpritePath);
 
+                attackerName.Text = $"What will you do, {player1Name}?";
+
+
                 player1HealthBar.MaxHealth = player1.maxHealth;
                 player1HealthBar.CurrentHealth = player1.health;
 
@@ -138,7 +141,7 @@ namespace ClassroomRPG
             StudentHero attacker = isPlayer1Turn ? player1 : player2;
             StudentHero defender = isPlayer1Turn ? player2 : player1;
 
-            attackerName.Text = $"What will you do {attacker.Name}";
+            attackerName.Text = $"What will you do, {defender.Name}?";
 
             int damage = attacker.Attack();
             defender.TakeDamage(damage);

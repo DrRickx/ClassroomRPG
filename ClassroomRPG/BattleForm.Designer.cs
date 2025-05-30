@@ -64,6 +64,7 @@
             // 
             // StartButton
             // 
+            StartButton.Font = new Font("Century Gothic", 9F);
             StartButton.Location = new Point(8, 8);
             StartButton.Name = "StartButton";
             StartButton.Size = new Size(94, 29);
@@ -75,6 +76,7 @@
             // BattleLogScreen
             // 
             BattleLogScreen.BorderStyle = BorderStyle.FixedSingle;
+            BattleLogScreen.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BattleLogScreen.FormattingEnabled = true;
             BattleLogScreen.Location = new Point(8, 8);
             BattleLogScreen.Name = "BattleLogScreen";
@@ -83,6 +85,7 @@
             // 
             // btnAttack
             // 
+            btnAttack.Font = new Font("Century Gothic", 9F);
             btnAttack.Location = new Point(108, 8);
             btnAttack.Name = "btnAttack";
             btnAttack.Size = new Size(94, 29);
@@ -118,9 +121,10 @@
             // attackerName
             // 
             attackerName.AutoSize = true;
+            attackerName.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             attackerName.Location = new Point(13, 10);
             attackerName.Name = "attackerName";
-            attackerName.Size = new Size(128, 20);
+            attackerName.Size = new Size(137, 18);
             attackerName.TabIndex = 0;
             attackerName.Text = "What will you do?";
             // 
@@ -129,7 +133,7 @@
             flowLayoutPanel5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel5.Controls.Add(StartButton);
             flowLayoutPanel5.Controls.Add(btnAttack);
-            flowLayoutPanel5.Location = new Point(13, 33);
+            flowLayoutPanel5.Location = new Point(13, 31);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Padding = new Padding(5);
             flowLayoutPanel5.Size = new Size(211, 41);
@@ -162,21 +166,22 @@
             Player2InformationPanel.Location = new Point(13, 13);
             Player2InformationPanel.Name = "Player2InformationPanel";
             Player2InformationPanel.Padding = new Padding(10);
-            Player2InformationPanel.Size = new Size(213, 149);
+            Player2InformationPanel.Size = new Size(213, 143);
             Player2InformationPanel.TabIndex = 18;
             // 
             // Player2Label
             // 
             Player2Label.AutoSize = true;
+            Player2Label.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Player2Label.Location = new Point(13, 10);
             Player2Label.Name = "Player2Label";
-            Player2Label.Size = new Size(105, 20);
+            Player2Label.Size = new Size(117, 18);
             Player2Label.TabIndex = 1;
             Player2Label.Text = "Player 2 name:";
             // 
             // Player2NameInput
             // 
-            Player2NameInput.Location = new Point(13, 33);
+            Player2NameInput.Location = new Point(13, 31);
             Player2NameInput.Name = "Player2NameInput";
             Player2NameInput.Size = new Size(125, 27);
             Player2NameInput.TabIndex = 3;
@@ -184,16 +189,17 @@
             // Player2ClassLabel
             // 
             Player2ClassLabel.AutoSize = true;
-            Player2ClassLabel.Location = new Point(13, 63);
+            Player2ClassLabel.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            Player2ClassLabel.Location = new Point(13, 61);
             Player2ClassLabel.Name = "Player2ClassLabel";
-            Player2ClassLabel.Size = new Size(45, 20);
+            Player2ClassLabel.Size = new Size(50, 18);
             Player2ClassLabel.TabIndex = 5;
             Player2ClassLabel.Text = "Class:";
             // 
             // Player2ClassList
             // 
             Player2ClassList.FormattingEnabled = true;
-            Player2ClassList.Location = new Point(13, 86);
+            Player2ClassList.Location = new Point(13, 82);
             Player2ClassList.Name = "Player2ClassList";
             Player2ClassList.Size = new Size(185, 28);
             Player2ClassList.TabIndex = 7;
@@ -201,9 +207,10 @@
             // Player2HealthLabel
             // 
             Player2HealthLabel.AutoSize = true;
-            Player2HealthLabel.Location = new Point(13, 117);
+            Player2HealthLabel.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            Player2HealthLabel.Location = new Point(13, 113);
             Player2HealthLabel.Name = "Player2HealthLabel";
-            Player2HealthLabel.Size = new Size(56, 20);
+            Player2HealthLabel.Size = new Size(59, 18);
             Player2HealthLabel.TabIndex = 11;
             Player2HealthLabel.Text = "Health:";
             // 
@@ -242,21 +249,22 @@
             Player1InformationPanel.Location = new Point(13, 13);
             Player1InformationPanel.Name = "Player1InformationPanel";
             Player1InformationPanel.Padding = new Padding(10);
-            Player1InformationPanel.Size = new Size(213, 149);
+            Player1InformationPanel.Size = new Size(213, 143);
             Player1InformationPanel.TabIndex = 17;
             // 
             // player1Label
             // 
             player1Label.AutoSize = true;
+            player1Label.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             player1Label.Location = new Point(13, 10);
             player1Label.Name = "player1Label";
-            player1Label.Size = new Size(105, 20);
+            player1Label.Size = new Size(117, 18);
             player1Label.TabIndex = 0;
             player1Label.Text = "Player 1 name:";
             // 
             // Player1NameInput
             // 
-            Player1NameInput.Location = new Point(13, 33);
+            Player1NameInput.Location = new Point(13, 31);
             Player1NameInput.Name = "Player1NameInput";
             Player1NameInput.Size = new Size(125, 27);
             Player1NameInput.TabIndex = 2;
@@ -264,16 +272,17 @@
             // Player1ClassLabel
             // 
             Player1ClassLabel.AutoSize = true;
-            Player1ClassLabel.Location = new Point(13, 63);
+            Player1ClassLabel.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            Player1ClassLabel.Location = new Point(13, 61);
             Player1ClassLabel.Name = "Player1ClassLabel";
-            Player1ClassLabel.Size = new Size(45, 20);
+            Player1ClassLabel.Size = new Size(50, 18);
             Player1ClassLabel.TabIndex = 4;
             Player1ClassLabel.Text = "Class:";
             // 
             // Player1ClassList
             // 
             Player1ClassList.FormattingEnabled = true;
-            Player1ClassList.Location = new Point(13, 86);
+            Player1ClassList.Location = new Point(13, 82);
             Player1ClassList.Name = "Player1ClassList";
             Player1ClassList.Size = new Size(185, 28);
             Player1ClassList.TabIndex = 6;
@@ -281,9 +290,10 @@
             // Player1HealthLabel
             // 
             Player1HealthLabel.AutoSize = true;
-            Player1HealthLabel.Location = new Point(13, 117);
+            Player1HealthLabel.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            Player1HealthLabel.Location = new Point(13, 113);
             Player1HealthLabel.Name = "Player1HealthLabel";
-            Player1HealthLabel.Size = new Size(56, 20);
+            Player1HealthLabel.Size = new Size(59, 18);
             Player1HealthLabel.TabIndex = 10;
             Player1HealthLabel.Text = "Health:";
             // 

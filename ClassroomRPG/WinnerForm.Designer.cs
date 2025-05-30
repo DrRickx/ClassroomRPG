@@ -37,10 +37,10 @@
             // 
             WinnerLabel.AutoSize = true;
             WinnerLabel.FlatStyle = FlatStyle.System;
-            WinnerLabel.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WinnerLabel.Font = new Font("Century Gothic", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WinnerLabel.Location = new Point(121, 79);
             WinnerLabel.Name = "WinnerLabel";
-            WinnerLabel.Size = new Size(559, 81);
+            WinnerLabel.Size = new Size(601, 74);
             WinnerLabel.TabIndex = 0;
             WinnerLabel.Text = "!!!Congratulations!!!";
             // 
@@ -48,8 +48,8 @@
             // 
             LabelWinnerMessage.AccessibleRole = AccessibleRole.None;
             LabelWinnerMessage.AutoSize = true;
-            LabelWinnerMessage.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelWinnerMessage.Location = new Point(147, 198);
+            LabelWinnerMessage.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelWinnerMessage.Location = new Point(0, 0);
             LabelWinnerMessage.Name = "LabelWinnerMessage";
             LabelWinnerMessage.Size = new Size(511, 81);
             LabelWinnerMessage.TabIndex = 1;
@@ -58,9 +58,11 @@
             // 
             // btnResetGame
             // 
+            btnResetGame.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnResetGame.Location = new Point(339, 309);
             btnResetGame.Name = "btnResetGame";
-            btnResetGame.Size = new Size(122, 29);
+            btnResetGame.Padding = new Padding(5);
+            btnResetGame.Size = new Size(122, 37);
             btnResetGame.TabIndex = 2;
             btnResetGame.Text = "PLAY AGAIN";
             btnResetGame.UseVisualStyleBackColor = true;
