@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace ClassroomRPG
 {
-    public partial class WinnerForm: Form
+    public partial class WinnerForm : Form
     {
         public WinnerForm(string winnerName)
         {
             InitializeComponent();
-            LabelWinnerMessage.Text = $"{winnerName} wins the battle";
+            LabelWinnerMessage.Text = $"You win {winnerName}";
+        }
+
+        private void btnResetGame_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

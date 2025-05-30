@@ -12,6 +12,8 @@ namespace ClassroomRPG
         public int health { get; private set; }
         public int maxHealth { get; private set; }
 
+        public string SpritePath { get; protected set; }
+
         public StudentHero(string name, int maxHealth)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -26,6 +28,7 @@ namespace ClassroomRPG
             Name = name;
             this.maxHealth = maxHealth;
             this.health = maxHealth;
+            SpritePath = string.Empty;
         }
 
         public abstract int Attack();

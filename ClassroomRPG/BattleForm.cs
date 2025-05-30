@@ -5,9 +5,60 @@ namespace ClassroomRPG
         private StudentHero? player1, player2;
         private bool isPlayer1Turn = true;
 
+        private HealthBar player1HealthBar;
+        private HealthBar player2HealthBar;
+
+        //Reset Game Method
+        private void ResetGame()
+        {
+            player1 = null;
+            player2 = null;
+
+            player1HealthBar.CurrentHealth = 0;
+            player1HealthBar.MaxHealth = 100;
+            player2HealthBar.CurrentHealth = 0;
+            player2HealthBar.MaxHealth = 100;
+
+            Player1Avatar.Image = null;
+            Player2Avatar.Image = null;
+
+            Player1NameInput.Text = "";
+            Player2NameInput.Text = "";
+
+            Player1ClassList.SelectedIndex = -1;
+            Player2ClassList.SelectedIndex = -1;
+
+            BattleLogScreen.Items.Clear();
+
+            attackerName.Text = "";
+
+            StartButton.Enabled = true;
+            StartButton.BackColor = SystemColors.Control;
+
+            btnAttack.Enabled = false;
+
+            isPlayer1Turn = true;
+        }
+
+
         public BattleForm()
         {
             InitializeComponent();
+
+            player1HealthBar = new HealthBar
+            {
+                Size = new Size(200, 25)
+            };
+
+            Player1InformationPanel.Controls.Add(player1HealthBar);
+
+            player2HealthBar = new HealthBar
+            {
+                Size = new Size(200, 25)
+            };
+           
+            Player2InformationPanel.Controls.Add(player2HealthBar);
+
             Player1ClassList.Items.AddRange(new string[] { "Fighter Nelson", "Paladin Alexander" });
             Player2ClassList.Items.AddRange(new string[] { "Fighter Nelson", "Paladin Alexander" });
             btnAttack.Enabled = false;
@@ -36,14 +87,31 @@ namespace ClassroomRPG
                 player1 = createCharacter(player1Class, player1Name);
                 player2 = createCharacter(player2Class, player2Name);
 
-                Player1HealthValue.Text = $"Health: {player1.health}";
-                Player2HealthValue.Text = $"Health: {player2.health}";
+                Player1Avatar.Image = Image.FromFile(player1.SpritePath);
+
+                Player2Avatar.Image = Image.FromFile(player2.SpritePath);
+
+                player1HealthBar.MaxHealth = player1.maxHealth;
+                player1HealthBar.CurrentHealth = player1.health;
+
+                player2HealthBar.MaxHealth = player2.maxHealth;
+                player2HealthBar.CurrentHealth = player2.health;
+
+                //Player1HealthBar.Maximum = player1.maxHealth;
+                //Player1HealthBar.Value = player1.health;
+
+                //Player2HealthBar.Maximum = player2.maxHealth;
+                //Player2HealthBar.Value = player2.health;
+
                 BattleLogScreen.Items.Clear();
 
                 btnAttack.Enabled = true;
                 isPlayer1Turn = true;
 
-                MessageBox.Show("Battle started! Click 'Attack' to take turns.", "Start", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                StartButton.Enabled = false;
+                StartButton.BackColor = Color.Gray;
+
+                BattleLogScreen.Items.Add("Battle Started (Press attack to start offense!)");
 
 
             }
@@ -70,13 +138,18 @@ namespace ClassroomRPG
             StudentHero attacker = isPlayer1Turn ? player1 : player2;
             StudentHero defender = isPlayer1Turn ? player2 : player1;
 
+            attackerName.Text = $"What will you do {attacker.Name}";
+
             int damage = attacker.Attack();
             defender.TakeDamage(damage);
 
             BattleLogScreen.Items.Add($"{attacker.Name} attacks {defender.Name} for {damage} damage!");
 
-            Player1HealthValue.Text = $"Health: {player1.health}";
-            Player2HealthValue.Text = $"Health: {player2.health}";
+            player1HealthBar.CurrentHealth = player1.health;
+            player2HealthBar.CurrentHealth = player2.health;
+
+            //Player1HealthBar.Value = Math.Max(0, player1.health);
+            //Player2HealthBar.Value = Math.Max(0, player2.health);
 
             BattleLogScreen.SelectedIndex = BattleLogScreen.Items.Count - 1;
 
@@ -88,9 +161,17 @@ namespace ClassroomRPG
 
                 // Show WinnerForm using ShowDialog
                 WinnerForm winForm = new WinnerForm(attacker.Name);
-                winForm.ShowDialog();
+
+                if (winForm.ShowDialog() == DialogResult.OK)
+                {
+                    ResetGame();
+                }
+
 
                 btnAttack.Enabled = false;
+
+                StartButton.Enabled = true;
+                StartButton.BackColor = SystemColors.Control;
 
                 return;
             }

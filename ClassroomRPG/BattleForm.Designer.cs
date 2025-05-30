@@ -28,92 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            player1Label = new Label();
-            Player2Label = new Label();
-            Player1NameInput = new TextBox();
-            Player2NameInput = new TextBox();
-            Player1ClassLabel = new Label();
-            Player2ClassLabel = new Label();
-            Player1ClassList = new ComboBox();
-            Player2ClassList = new ComboBox();
             StartButton = new Button();
             BattleLogScreen = new ListBox();
-            Player1HealthLabel = new Label();
-            Player2HealthLabel = new Label();
-            Player1HealthValue = new Label();
-            Player2HealthValue = new Label();
             btnAttack = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel4 = new FlowLayoutPanel();
+            attackerName = new Label();
+            flowLayoutPanel5 = new FlowLayoutPanel();
+            flowLayoutPanel3 = new FlowLayoutPanel();
+            Player2InformationPanel = new FlowLayoutPanel();
+            Player2Label = new Label();
+            Player2NameInput = new TextBox();
+            Player2ClassLabel = new Label();
+            Player2ClassList = new ComboBox();
+            Player2HealthLabel = new Label();
+            Player2Avatar = new PictureBox();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            Player1InformationPanel = new FlowLayoutPanel();
+            player1Label = new Label();
+            Player1NameInput = new TextBox();
+            Player1ClassLabel = new Label();
+            Player1ClassList = new ComboBox();
+            Player1HealthLabel = new Label();
+            Player1Avatar = new PictureBox();
+            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
+            flowLayoutPanel5.SuspendLayout();
+            flowLayoutPanel3.SuspendLayout();
+            Player2InformationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Player2Avatar).BeginInit();
+            flowLayoutPanel2.SuspendLayout();
+            Player1InformationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Player1Avatar).BeginInit();
             SuspendLayout();
-            // 
-            // player1Label
-            // 
-            player1Label.AutoSize = true;
-            player1Label.Location = new Point(12, 19);
-            player1Label.Name = "player1Label";
-            player1Label.Size = new Size(105, 20);
-            player1Label.TabIndex = 0;
-            player1Label.Text = "Player 1 name:";
-            // 
-            // Player2Label
-            // 
-            Player2Label.AutoSize = true;
-            Player2Label.Location = new Point(269, 19);
-            Player2Label.Name = "Player2Label";
-            Player2Label.Size = new Size(105, 20);
-            Player2Label.TabIndex = 1;
-            Player2Label.Text = "Player 2 name:";
-            // 
-            // Player1NameInput
-            // 
-            Player1NameInput.Location = new Point(123, 16);
-            Player1NameInput.Name = "Player1NameInput";
-            Player1NameInput.Size = new Size(125, 27);
-            Player1NameInput.TabIndex = 2;
-            // 
-            // Player2NameInput
-            // 
-            Player2NameInput.Location = new Point(380, 16);
-            Player2NameInput.Name = "Player2NameInput";
-            Player2NameInput.Size = new Size(125, 27);
-            Player2NameInput.TabIndex = 3;
-            // 
-            // Player1ClassLabel
-            // 
-            Player1ClassLabel.AutoSize = true;
-            Player1ClassLabel.Location = new Point(67, 50);
-            Player1ClassLabel.Name = "Player1ClassLabel";
-            Player1ClassLabel.Size = new Size(45, 20);
-            Player1ClassLabel.TabIndex = 4;
-            Player1ClassLabel.Text = "Class:";
-            // 
-            // Player2ClassLabel
-            // 
-            Player2ClassLabel.AutoSize = true;
-            Player2ClassLabel.Location = new Point(329, 50);
-            Player2ClassLabel.Name = "Player2ClassLabel";
-            Player2ClassLabel.Size = new Size(45, 20);
-            Player2ClassLabel.TabIndex = 5;
-            Player2ClassLabel.Text = "Class:";
-            // 
-            // Player1ClassList
-            // 
-            Player1ClassList.FormattingEnabled = true;
-            Player1ClassList.Location = new Point(123, 50);
-            Player1ClassList.Name = "Player1ClassList";
-            Player1ClassList.Size = new Size(125, 28);
-            Player1ClassList.TabIndex = 6;
-            // 
-            // Player2ClassList
-            // 
-            Player2ClassList.FormattingEnabled = true;
-            Player2ClassList.Location = new Point(380, 50);
-            Player2ClassList.Name = "Player2ClassList";
-            Player2ClassList.Size = new Size(125, 28);
-            Player2ClassList.TabIndex = 7;
             // 
             // StartButton
             // 
-            StartButton.Location = new Point(558, 19);
+            StartButton.Location = new Point(8, 8);
             StartButton.Name = "StartButton";
             StartButton.Size = new Size(94, 29);
             StartButton.TabIndex = 8;
@@ -123,51 +74,16 @@
             // 
             // BattleLogScreen
             // 
+            BattleLogScreen.BorderStyle = BorderStyle.FixedSingle;
             BattleLogScreen.FormattingEnabled = true;
-            BattleLogScreen.Location = new Point(12, 105);
+            BattleLogScreen.Location = new Point(8, 8);
             BattleLogScreen.Name = "BattleLogScreen";
-            BattleLogScreen.Size = new Size(776, 184);
+            BattleLogScreen.Size = new Size(507, 102);
             BattleLogScreen.TabIndex = 9;
-            // 
-            // Player1HealthLabel
-            // 
-            Player1HealthLabel.AutoSize = true;
-            Player1HealthLabel.Location = new Point(12, 344);
-            Player1HealthLabel.Name = "Player1HealthLabel";
-            Player1HealthLabel.Size = new Size(112, 20);
-            Player1HealthLabel.TabIndex = 10;
-            Player1HealthLabel.Text = "Player 1 Health:";
-            // 
-            // Player2HealthLabel
-            // 
-            Player2HealthLabel.AutoSize = true;
-            Player2HealthLabel.Location = new Point(455, 344);
-            Player2HealthLabel.Name = "Player2HealthLabel";
-            Player2HealthLabel.Size = new Size(112, 20);
-            Player2HealthLabel.TabIndex = 11;
-            Player2HealthLabel.Text = "Player 2 Health:";
-            // 
-            // Player1HealthValue
-            // 
-            Player1HealthValue.AutoSize = true;
-            Player1HealthValue.Location = new Point(130, 344);
-            Player1HealthValue.Name = "Player1HealthValue";
-            Player1HealthValue.Size = new Size(149, 20);
-            Player1HealthValue.TabIndex = 12;
-            Player1HealthValue.Text = "Player 1 Health Value";
-            // 
-            // Player2HealthValue
-            // 
-            Player2HealthValue.AutoSize = true;
-            Player2HealthValue.Location = new Point(573, 344);
-            Player2HealthValue.Name = "Player2HealthValue";
-            Player2HealthValue.Size = new Size(149, 20);
-            Player2HealthValue.TabIndex = 13;
-            Player2HealthValue.Text = "Player 2 Health Value";
             // 
             // btnAttack
             // 
-            btnAttack.Location = new Point(329, 295);
+            btnAttack.Location = new Point(108, 8);
             btnAttack.Name = "btnAttack";
             btnAttack.Size = new Size(94, 29);
             btnAttack.TabIndex = 14;
@@ -175,48 +91,263 @@
             btnAttack.UseVisualStyleBackColor = true;
             btnAttack.Click += btnAttack_Click;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel1.Controls.Add(BattleLogScreen);
+            flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.Location = new Point(0, 462);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(5);
+            flowLayoutPanel1.Size = new Size(800, 119);
+            flowLayoutPanel1.TabIndex = 21;
+            // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel4.Controls.Add(attackerName);
+            flowLayoutPanel4.Controls.Add(flowLayoutPanel5);
+            flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel4.Location = new Point(521, 8);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Padding = new Padding(10);
+            flowLayoutPanel4.Size = new Size(263, 101);
+            flowLayoutPanel4.TabIndex = 15;
+            // 
+            // attackerName
+            // 
+            attackerName.AutoSize = true;
+            attackerName.Location = new Point(13, 10);
+            attackerName.Name = "attackerName";
+            attackerName.Size = new Size(128, 20);
+            attackerName.TabIndex = 0;
+            attackerName.Text = "What will you do?";
+            // 
+            // flowLayoutPanel5
+            // 
+            flowLayoutPanel5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel5.Controls.Add(StartButton);
+            flowLayoutPanel5.Controls.Add(btnAttack);
+            flowLayoutPanel5.Location = new Point(13, 33);
+            flowLayoutPanel5.Name = "flowLayoutPanel5";
+            flowLayoutPanel5.Padding = new Padding(5);
+            flowLayoutPanel5.Size = new Size(211, 41);
+            flowLayoutPanel5.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            flowLayoutPanel3.AutoSize = true;
+            flowLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel3.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel3.Controls.Add(Player2InformationPanel);
+            flowLayoutPanel3.Controls.Add(Player2Avatar);
+            flowLayoutPanel3.Location = new Point(157, 12);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Padding = new Padding(10);
+            flowLayoutPanel3.Size = new Size(613, 208);
+            flowLayoutPanel3.TabIndex = 22;
+            // 
+            // Player2InformationPanel
+            // 
+            Player2InformationPanel.AutoSize = true;
+            Player2InformationPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Player2InformationPanel.BorderStyle = BorderStyle.FixedSingle;
+            Player2InformationPanel.Controls.Add(Player2Label);
+            Player2InformationPanel.Controls.Add(Player2NameInput);
+            Player2InformationPanel.Controls.Add(Player2ClassLabel);
+            Player2InformationPanel.Controls.Add(Player2ClassList);
+            Player2InformationPanel.Controls.Add(Player2HealthLabel);
+            Player2InformationPanel.FlowDirection = FlowDirection.TopDown;
+            Player2InformationPanel.Location = new Point(13, 13);
+            Player2InformationPanel.Name = "Player2InformationPanel";
+            Player2InformationPanel.Padding = new Padding(10);
+            Player2InformationPanel.Size = new Size(213, 149);
+            Player2InformationPanel.TabIndex = 18;
+            // 
+            // Player2Label
+            // 
+            Player2Label.AutoSize = true;
+            Player2Label.Location = new Point(13, 10);
+            Player2Label.Name = "Player2Label";
+            Player2Label.Size = new Size(105, 20);
+            Player2Label.TabIndex = 1;
+            Player2Label.Text = "Player 2 name:";
+            // 
+            // Player2NameInput
+            // 
+            Player2NameInput.Location = new Point(13, 33);
+            Player2NameInput.Name = "Player2NameInput";
+            Player2NameInput.Size = new Size(125, 27);
+            Player2NameInput.TabIndex = 3;
+            // 
+            // Player2ClassLabel
+            // 
+            Player2ClassLabel.AutoSize = true;
+            Player2ClassLabel.Location = new Point(13, 63);
+            Player2ClassLabel.Name = "Player2ClassLabel";
+            Player2ClassLabel.Size = new Size(45, 20);
+            Player2ClassLabel.TabIndex = 5;
+            Player2ClassLabel.Text = "Class:";
+            // 
+            // Player2ClassList
+            // 
+            Player2ClassList.FormattingEnabled = true;
+            Player2ClassList.Location = new Point(13, 86);
+            Player2ClassList.Name = "Player2ClassList";
+            Player2ClassList.Size = new Size(185, 28);
+            Player2ClassList.TabIndex = 7;
+            // 
+            // Player2HealthLabel
+            // 
+            Player2HealthLabel.AutoSize = true;
+            Player2HealthLabel.Location = new Point(13, 117);
+            Player2HealthLabel.Name = "Player2HealthLabel";
+            Player2HealthLabel.Size = new Size(56, 20);
+            Player2HealthLabel.TabIndex = 11;
+            Player2HealthLabel.Text = "Health:";
+            // 
+            // Player2Avatar
+            // 
+            Player2Avatar.BorderStyle = BorderStyle.FixedSingle;
+            Player2Avatar.Location = new Point(232, 13);
+            Player2Avatar.Name = "Player2Avatar";
+            Player2Avatar.Size = new Size(366, 180);
+            Player2Avatar.TabIndex = 20;
+            Player2Avatar.TabStop = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.AutoSize = true;
+            flowLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel2.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel2.Controls.Add(Player1InformationPanel);
+            flowLayoutPanel2.Controls.Add(Player1Avatar);
+            flowLayoutPanel2.Location = new Point(9, 240);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Padding = new Padding(10);
+            flowLayoutPanel2.Size = new Size(615, 207);
+            flowLayoutPanel2.TabIndex = 1;
+            // 
+            // Player1InformationPanel
+            // 
+            Player1InformationPanel.AutoSize = true;
+            Player1InformationPanel.BorderStyle = BorderStyle.FixedSingle;
+            Player1InformationPanel.Controls.Add(player1Label);
+            Player1InformationPanel.Controls.Add(Player1NameInput);
+            Player1InformationPanel.Controls.Add(Player1ClassLabel);
+            Player1InformationPanel.Controls.Add(Player1ClassList);
+            Player1InformationPanel.Controls.Add(Player1HealthLabel);
+            Player1InformationPanel.FlowDirection = FlowDirection.TopDown;
+            Player1InformationPanel.Location = new Point(13, 13);
+            Player1InformationPanel.Name = "Player1InformationPanel";
+            Player1InformationPanel.Padding = new Padding(10);
+            Player1InformationPanel.Size = new Size(213, 149);
+            Player1InformationPanel.TabIndex = 17;
+            // 
+            // player1Label
+            // 
+            player1Label.AutoSize = true;
+            player1Label.Location = new Point(13, 10);
+            player1Label.Name = "player1Label";
+            player1Label.Size = new Size(105, 20);
+            player1Label.TabIndex = 0;
+            player1Label.Text = "Player 1 name:";
+            // 
+            // Player1NameInput
+            // 
+            Player1NameInput.Location = new Point(13, 33);
+            Player1NameInput.Name = "Player1NameInput";
+            Player1NameInput.Size = new Size(125, 27);
+            Player1NameInput.TabIndex = 2;
+            // 
+            // Player1ClassLabel
+            // 
+            Player1ClassLabel.AutoSize = true;
+            Player1ClassLabel.Location = new Point(13, 63);
+            Player1ClassLabel.Name = "Player1ClassLabel";
+            Player1ClassLabel.Size = new Size(45, 20);
+            Player1ClassLabel.TabIndex = 4;
+            Player1ClassLabel.Text = "Class:";
+            // 
+            // Player1ClassList
+            // 
+            Player1ClassList.FormattingEnabled = true;
+            Player1ClassList.Location = new Point(13, 86);
+            Player1ClassList.Name = "Player1ClassList";
+            Player1ClassList.Size = new Size(185, 28);
+            Player1ClassList.TabIndex = 6;
+            // 
+            // Player1HealthLabel
+            // 
+            Player1HealthLabel.AutoSize = true;
+            Player1HealthLabel.Location = new Point(13, 117);
+            Player1HealthLabel.Name = "Player1HealthLabel";
+            Player1HealthLabel.Size = new Size(56, 20);
+            Player1HealthLabel.TabIndex = 10;
+            Player1HealthLabel.Text = "Health:";
+            // 
+            // Player1Avatar
+            // 
+            Player1Avatar.BackgroundImageLayout = ImageLayout.Center;
+            Player1Avatar.BorderStyle = BorderStyle.FixedSingle;
+            Player1Avatar.Location = new Point(232, 13);
+            Player1Avatar.Name = "Player1Avatar";
+            Player1Avatar.Size = new Size(368, 179);
+            Player1Avatar.TabIndex = 19;
+            Player1Avatar.TabStop = false;
+            // 
             // BattleForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnAttack);
-            Controls.Add(Player2HealthValue);
-            Controls.Add(Player1HealthValue);
-            Controls.Add(Player2HealthLabel);
-            Controls.Add(Player1HealthLabel);
-            Controls.Add(BattleLogScreen);
-            Controls.Add(StartButton);
-            Controls.Add(Player2ClassList);
-            Controls.Add(Player1ClassList);
-            Controls.Add(Player2ClassLabel);
-            Controls.Add(Player1ClassLabel);
-            Controls.Add(Player2NameInput);
-            Controls.Add(Player1NameInput);
-            Controls.Add(Player2Label);
-            Controls.Add(player1Label);
+            ClientSize = new Size(800, 581);
+            Controls.Add(flowLayoutPanel3);
+            Controls.Add(flowLayoutPanel2);
+            Controls.Add(flowLayoutPanel1);
             Name = "BattleForm";
             Text = "BattleForm";
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
+            flowLayoutPanel5.ResumeLayout(false);
+            flowLayoutPanel3.ResumeLayout(false);
+            flowLayoutPanel3.PerformLayout();
+            Player2InformationPanel.ResumeLayout(false);
+            Player2InformationPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Player2Avatar).EndInit();
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
+            Player1InformationPanel.ResumeLayout(false);
+            Player1InformationPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Player1Avatar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label player1Label;
-        private Label Player2Label;
-        private TextBox Player1NameInput;
-        private TextBox Player2NameInput;
-        private Label Player1ClassLabel;
-        private Label Player2ClassLabel;
-        private ComboBox Player1ClassList;
-        private ComboBox Player2ClassList;
         private Button StartButton;
         private ListBox BattleLogScreen;
-        private Label Player1HealthLabel;
-        private Label Player2HealthLabel;
-        private Label Player1HealthValue;
-        private Label Player2HealthValue;
         private Button btnAttack;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label attackerName;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private FlowLayoutPanel flowLayoutPanel5;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private FlowLayoutPanel Player2InformationPanel;
+        private Label Player2Label;
+        private TextBox Player2NameInput;
+        private Label Player2ClassLabel;
+        private ComboBox Player2ClassList;
+        private Label Player2HealthLabel;
+        private PictureBox Player2Avatar;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel Player1InformationPanel;
+        private Label player1Label;
+        private TextBox Player1NameInput;
+        private Label Player1ClassLabel;
+        private ComboBox Player1ClassList;
+        private Label Player1HealthLabel;
+        private PictureBox Player1Avatar;
     }
 }

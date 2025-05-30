@@ -13,6 +13,7 @@ namespace ClassroomRPG
         public Fighter(string name) : base(name, 100)
         {
             random = new Random();
+            SpritePath = "Resources/fighter.png";
         }
 
         // Overrides Attack with a logic-based precision strike

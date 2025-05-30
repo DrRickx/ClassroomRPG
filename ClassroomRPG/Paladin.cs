@@ -13,6 +13,7 @@ namespace ClassroomRPG
         public Paladin(string name) : base(name, 150)
         {
             Random random = new Random();
+            SpritePath = "Resources/cleric.png";
         }
 
         public override int Attack()
