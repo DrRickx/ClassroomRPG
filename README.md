@@ -8,7 +8,7 @@ Characters:
   Nelson is a powerful fighter known for his high attack power and close-range combat skills. He uses brute force and quick strikes to defeat his enemies.
 
 - Character 2: Paladin Alex  
-  Alex is a noble paladin who specializes in healing and defense. With his strong armor and healing abilities, he supports his team while also fighting off evil with his sword.
+  Alex is a noble paladin who acts as a tank. He has high health and strong defense, allowing him to take heavy damage while staying in the fight. He focuses on wearing down enemies over time through patience and endurance rather than strong attacks.
 
 How OOP Principles Were Applied:
 
