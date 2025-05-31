@@ -191,5 +191,10 @@ namespace ClassroomRPG
         {
 
         }
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

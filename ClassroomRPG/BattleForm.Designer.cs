@@ -97,6 +97,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = Color.FromArgb(192, 255, 255);
             flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
             flowLayoutPanel1.Controls.Add(BattleLogScreen);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
@@ -144,6 +145,7 @@
             // 
             flowLayoutPanel3.AutoSize = true;
             flowLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel3.BackColor = Color.FromArgb(192, 255, 255);
             flowLayoutPanel3.BorderStyle = BorderStyle.FixedSingle;
             flowLayoutPanel3.Controls.Add(Player2Avatar);
             flowLayoutPanel3.Controls.Add(Player2InformationPanel);
@@ -152,6 +154,7 @@
             flowLayoutPanel3.Padding = new Padding(10);
             flowLayoutPanel3.Size = new Size(613, 208);
             flowLayoutPanel3.TabIndex = 22;
+            flowLayoutPanel3.Paint += flowLayoutPanel3_Paint;
             // 
             // Player2Avatar
             // 
@@ -229,6 +232,7 @@
             // 
             flowLayoutPanel2.AutoSize = true;
             flowLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel2.BackColor = Color.FromArgb(192, 255, 255);
             flowLayoutPanel2.BorderStyle = BorderStyle.FixedSingle;
             flowLayoutPanel2.Controls.Add(Player1InformationPanel);
             flowLayoutPanel2.Controls.Add(Player1Avatar);
